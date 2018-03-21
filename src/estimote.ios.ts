@@ -1,5 +1,3 @@
-import { Common } from './estimote.common';
-
 
 export class ESTDeviceManagerDelegateImpl extends NSObject implements ESTDeviceManagerDelegate{
 
@@ -24,7 +22,7 @@ export class ESTDeviceManagerDelegateImpl extends NSObject implements ESTDeviceM
 }
 
 
-export class Estimote extends Common {
+export class Estimote {
 
     public message: string
     public manager: ESTDeviceManager
@@ -32,7 +30,6 @@ export class Estimote extends Common {
     public delegate: ESTDeviceManagerDelegateImpl = ESTDeviceManagerDelegateImpl.new()
 
     constructor(){
-        super()
 
         this.manager = ESTDeviceManager.new()
         this.manager.delegate = this.delegate
